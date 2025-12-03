@@ -1,0 +1,596 @@
+/* BASIC RESET & GLOBALS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --nav-height: 72px;
+  --dark-bg: #080c12;
+  --dark-overlay: #0c1117;
+  --light-bg: #f4f4f4;
+  --accent-gold: #c49a53;
+  --text-main: #ffffff;
+  --text-muted: #d0d4dd;
+  --service-blue: #1f5677;
+  --footer-bg: #05070b;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background-color: var(--dark-bg);
+}
+
+/* TOP NAV */
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+}
+
+.nav-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-inner nav ul {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.nav-inner nav a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+  background-image: url("bulding2.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--text-main);
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(3, 7, 16, 0.96) 0%,
+    rgba(3, 7, 16, 0.9) 40%,
+    rgba(3, 7, 16, 0.25) 70%,
+    rgba(3, 7, 16, 0.65) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text {
+  padding: 120px 0 80px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* Hero pill row */
+
+.hero-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Bigger (medium) circle icons */
+.pill-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  background: rgba(18, 33, 52, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pill-icon img {
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+}
+
+.pill-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Circle BNZ logo */
+
+.hero-logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-logo-circle {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  backdrop-filter: blur(2px);
+}
+
+.hero-logo-leaf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-leaf img {
+  width: 36px;
+  height: auto;
+  display: block;
+}
+
+.hero-logo-text {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* SERVICES SECTION (PAGE 2) */
+
+.services {
+  position: relative;
+  background-image: url("building1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 110px 0 100px;
+}
+
+.services-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 14, 24, 0.96);
+  z-index: 1;
+}
+
+.services-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  color: #ffffff;
+}
+
+.service-column h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  line-height: 1.35;
+}
+
+.service-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.service-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.service-block h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.service-block p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.service-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* old placeholder boxes (only if used somewhere else) */
+.service-image-placeholder {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(15, 44, 76, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.service-image-placeholder.large {
+  margin-top: 40px;
+  height: 160px;
+}
+
+.service-image-placeholder.medium {
+  margin-top: 24px;
+  height: 130px;
+}
+
+/* Dashboard image (left column) */
+.service-dashboard {
+  margin-top: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-dashboard img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Skyscraper / city illustration – smaller, no border */
+.service-illustration {
+  margin-top: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-illustration img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cert logos row with PNGs */
+
+.cert-logos-row {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-logo-box {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* CONTACT SECTION (PAGE 3) */
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+  background-image: url("office1.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contact-overlay-left {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(3, 7, 16, 0.96) 0%,
+    rgba(3, 7, 16, 0.9) 40%,
+    rgba(3, 7, 16, 0.35) 65%,
+    rgba(3, 7, 16, 0) 100%
+  );
+}
+
+.contact-inner {
+ 
+/*   border:2px solid red; */
+  z-index: 2;
+ width:50%;
+  margin-left:5% ;
+  padding: 80px 0 40px;
+  display: flex;
+
+}
+
+/* Left: form */
+
+.contact-form-area h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  
+}
+
+.contact-form-area p {
+  font-size: 14px;
+  margin-bottom: 26px;
+  color: var(--text-muted);
+
+}
+
+.contact-form {
+    /*   border:2px solid purple; */
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 3px;
+  border: none;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.97);
+  color: #222;
+}
+
+.btn-submit {
+  margin-top: 4px;
+  padding: 10px 28px;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  filter: brightness(1.05);
+}
+
+/* Social icons */
+
+.contact-social {
+  margin-top: 22px;
+  display: flex;
+  gap: 14px;
+}
+
+.contact-social a {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  z-index: 2;
+  background: var(--footer-bg);
+  color: #d0d4dd;
+  font-size: 11px;
+  padding: 14px 0;
+}
+
+.footer > div {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  justify-content: flex-start;
+}
+
+.footer-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-right {
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.footer-right a {
+  color: #d0d4dd;
+  text-decoration: none;
+}
+
+.footer-logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-text.small {
+  font-size: 16px;
+}
+
+/* SIMPLE RESPONSIVENESS – keeps the layout close on smaller screens */
+
+@media (max-width: 992px) {
+  .hero-content,
+  .services-inner,
+  .contact-inner {
+    padding: 0 24px;
+  }
+
+  .services-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 80px 24px 40px;
+  }
+
+  .hero-logo {
+    margin-top: 40px;
+    justify-content: center;
+  }
+}
+/* Pill Cards Layout */
+.hero-pill-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.pill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 260px;
+}
+
+.pill-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  background: rgba(18, 33, 52, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.pill-icon img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.pill-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pill-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 240px;
+}
