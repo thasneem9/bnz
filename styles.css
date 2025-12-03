@@ -21,7 +21,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,10 +35,10 @@ body {
 
 /* CONTAINER UTILITY */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px; /* Consistent side padding */
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px; /* Consistent side padding */
+  width: 100%;
 }
 
 /* TOP NAV */
@@ -49,7 +49,6 @@ body {
   left: 0;
   right: 0;
   height: var(--nav-height);
-  /* Starts transparent, will be changed by JS on scroll/section */
   background-color: transparent;
   backdrop-filter: blur(0px);
   transition: background-color 0.3s, backdrop-filter 0.3s;
@@ -58,9 +57,9 @@ body {
 
 /* Class added by JS on scroll or on non-hero pages */
 .top-nav.scrolled {
-    background-color: rgba(4, 9, 17, 0.95); /* Semi-transparent deep navy */
-    backdrop-filter: blur(8px); /* Subtle glass effect */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(4, 9, 17, 0.95); /* Semi-transparent deep navy */
+  backdrop-filter: blur(8px); /* Subtle glass effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-inner {
@@ -72,12 +71,12 @@ body {
 
 /* Placeholder for the logo/brand text on the right */
 .nav-brand {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--text-light);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    padding-right: 20px; /* Aligned to the right edge */
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  padding-right: 20px; /* Aligned to the right edge */
 }
 
 .nav-inner nav ul {
@@ -97,18 +96,16 @@ body {
 }
 
 .nav-inner nav a:hover {
-    color: var(--accent-gold);
+  color: var(--accent-gold);
 }
-
 
 /* HERO SECTION */
 
 .hero {
-
   position: relative;
   min-height: 100vh;
   padding-top: var(--nav-height);
-  background-image: url("bulding2.jpg"); 
+  background-image: url("bulding2.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -119,10 +116,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  /* Sharper, more dramatic gradient for depth */
   background: linear-gradient(
     to right,
-    rgba(4, 9, 17, 0.98) 0%, /* Near opaque deep navy on left */
+    rgba(4, 9, 17, 0.98) 0%,
     rgba(4, 9, 17, 0.9) 45%,
     rgba(4, 9, 17, 0.4) 70%,
     rgba(4, 9, 17, 0.8) 100%
@@ -131,7 +127,6 @@ body {
 }
 
 .hero-content {
-  
   position: relative;
   z-index: 2;
   width: 100%;
@@ -149,7 +144,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 48px; /* Larger, more impactful title */
+  font-size: 48px; /* Desktop size */
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 30px;
@@ -158,27 +153,26 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 18px; /* Slightly larger subtitle */
+  font-size: 18px;
   line-height: 1.6;
   color: var(--text-muted);
   margin-bottom: 60px;
 }
 
-/* Hero pill cards: Re-styled for elegance */
+/* Hero pill cards */
 
 .hero-pill-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px; /* Tighter gap for better flow */
- 
-  width:190%;
-  margin-top:14%;
+  gap: 30px;
+  width: 190%;
+  margin-top: 14%;
 }
 
 .pill-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Left-aligned content */
+  align-items: flex-start;
   text-align: left;
   padding: 20px 0;
 }
@@ -187,8 +181,8 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid var(--accent-gold); /* Gold border for premium touch */
-  background: rgba(18, 33, 52, 0.5); /* Subtler background */
+  border: 2px solid var(--accent-gold);
+  background: rgba(18, 33, 52, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +194,7 @@ body {
   width: 90%;
   height: 90%;
   object-fit: contain;
-  filter: brightness(1.2); /* Make icons stand out against the background */
+  filter: brightness(1.2);
 }
 
 .pill-title {
@@ -216,7 +210,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Circle BNZ logo (Kept, but refined) */
+/* Circle BNZ logo */
 
 .hero-logo {
   display: flex;
@@ -225,55 +219,54 @@ body {
 }
 
 .hero-logo-circle {
-  width: 280px; /* Larger, more substantial logo */
+  width: 280px;
   height: 280px;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.2);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2px;
-  background: rgba(4, 9, 17, 0.6); /* Deeper background for blur */
+  background: rgba(4, 9, 17, 0.6);
   backdrop-filter: blur(4px);
   transition: transform 0.5s;
-  position:relative;
-  margin-top:-150%;
-  margin-right:-50%;
+  position: relative;
+  margin-top: -150%;
+  margin-right: -50%;
 }
 
 .hero-logo-circle:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .hero-logo-leaf img {
-  width: 148px; /* Larger leaf */
+  width: 148px;
   height: auto;
-  filter: invert(1) drop-shadow(0 0 5px var(--accent-gold)); /* Add subtle glow/focus */
+  filter: invert(1) drop-shadow(0 0 5px var(--accent-gold));
 }
 
 .hero-logo-text {
-  font-size: 56px; /* Larger BNZ text */
+  font-size: 56px;
   font-weight: 600;
   letter-spacing: 0.15em;
   color: var(--accent-gold);
 }
 
-/* SERVICES SECTION (PAGE 2) */
+/* SERVICES SECTION */
 
 .services {
   position: relative;
-  background-image: url("building1.jpg"); /* Ensure this image is high-res */
+  background-image: url("building1.jpg");
   background-size: cover;
   background-position: center;
-  padding: 120px 0; /* More padding */
+  padding: 120px 0;
 }
 
 .services-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(4, 9, 17, 0.98); /* Near opaque deep navy */
+  background: rgba(4, 9, 17, 0.98);
   z-index: 1;
 }
 
@@ -282,21 +275,21 @@ body {
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 50px; /* Increased gap */
+  gap: 50px;
 }
 
 .service-column h2 {
-  font-size: 28px; /* Larger heading */
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 30px;
   line-height: 1.3;
   color: var(--accent-gold);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 15px;
 }
 
 .service-list {
-  list-style: none; /* Removed default disc for cleaner look */
+  list-style: none;
   padding-left: 0;
   font-size: 15px;
   line-height: 1.7;
@@ -304,19 +297,19 @@ body {
 }
 
 .service-list li::before {
-    content: "•"; /* Custom bullet point */
-    color: var(--accent-gold);
-    font-weight: 700;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+  content: "•";
+  color: var(--accent-gold);
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .service-block {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  margin-bottom: 30px; /* Increased spacing */
+  margin-bottom: 30px;
 }
 
 .service-block h3 {
@@ -334,10 +327,10 @@ body {
 
 .service-icon-circle {
   flex-shrink: 0;
-  width: 36px; /* Slightly larger icon */
+  width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid var(--accent-light); /* Accent blue border */
+  border: 2px solid var(--accent-light);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -348,12 +341,12 @@ body {
   margin-top: 30px;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Added subtle shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .service-dashboard img {
   width: 100%;
-  height: 180px; /* Slightly taller */
+  height: 180px;
   object-fit: cover;
   display: block;
   opacity: 80%;
@@ -361,57 +354,55 @@ body {
 
 .service-illustration img {
   width: 100%;
-  height: 190px; /* Slightly taller */
-  object-fit:fill;
+  height: 190px;
+  object-fit: fill;
   display: block;
-    opacity: 90%;
-    border:none;
-    box-shadow: none;
+  opacity: 90%;
+  border: none;
+  box-shadow: none;
 }
 
-/* --- REVISED CERTIFICATION LOGO STYLES --- */
+/* CERTIFICATION LOGOS */
+
 .cert-logos-row {
-  margin-top: 20px; /* Reduced margin */
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px; /* Tighter spacing */
-  justify-content: flex-start; /* Horizontal stacking */
+  gap: 12px;
+  justify-content: flex-start;
 }
 
 .cert-logo-box {
-  width: 48px; /* Smaller size */
+  width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 2px;
   padding: 3px;
-  opacity: 0.8; /* Mute them slightly */
+  opacity: 0.8;
 }
 
 .cert-logo-box img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* Apply a slight blur effect to simulate "blurred edges" and mute them */
-  filter: blur(0.3px) grayscale(50%); 
+  filter: blur(0.3px) grayscale(50%);
   transition: filter 0.3s, opacity 0.3s;
 }
 
 .cert-logo-box img:hover {
-    filter: none; /* Clear the filter on hover for a subtle effect */
-    opacity: 1;
+  filter: none;
+  opacity: 1;
 }
-/* ----------------------------------------- */
 
-
-/* CONTACT SECTION (PAGE 3) */
+/* CONTACT SECTION */
 
 .contact {
   position: relative;
-min-height: 24vh;
+  min-height: 24vh;
   padding-top: var(--nav-height);
-  background-image: url("office1.png"); /* Ensure high-res image */
+  background-image: url("office1.png");
   background-size: cover;
   background-position: center;
   color: var(--text-light);
@@ -423,7 +414,6 @@ min-height: 24vh;
 .contact-overlay-left {
   position: absolute;
   inset: 0;
-  /* Deep, high-contrast overlay */
   background: linear-gradient(
     to right,
     rgba(4, 9, 17, 0.98) 0%,
@@ -442,7 +432,7 @@ min-height: 24vh;
 }
 
 .contact-form-area {
-    max-width: 500px; /* Constrain form width for elegance */
+  max-width: 500px;
 }
 
 .contact-form-area h2 {
@@ -478,16 +468,16 @@ min-height: 24vh;
   padding: 12px 16px;
   font-size: 15px;
   font-family: inherit;
-  background: rgba(255, 255, 255, 0.05); /* Dark, transparent input */
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text-light);
   transition: border-color 0.3s, background 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-gold);
-    background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-submit {
@@ -496,7 +486,7 @@ min-height: 24vh;
   border-radius: 4px;
   border: none;
   background-color: var(--accent-gold);
-  color: var(--dark-primary); /* Dark text on gold button */
+  color: var(--dark-primary);
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -505,7 +495,7 @@ min-height: 24vh;
 }
 
 .btn-submit:hover {
-  background-color: #d1b379; /* Slightly brighter gold */
+  background-color: #d1b379;
   transform: translateY(-1px);
 }
 
@@ -518,7 +508,7 @@ min-height: 24vh;
 }
 
 .contact-social a {
-  width: 40px; /* Larger icons */
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--accent-gold);
@@ -533,8 +523,8 @@ min-height: 24vh;
 }
 
 .contact-social a:hover {
-    background: var(--accent-gold);
-    color: var(--dark-primary);
+  background: var(--accent-gold);
+  color: var(--dark-primary);
 }
 
 /* FOOTER */
@@ -545,7 +535,7 @@ min-height: 24vh;
   background: var(--footer-bg);
   color: var(--text-muted);
   font-size: 12px;
-  padding: 20px 0; /* More padding */
+  padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -559,7 +549,7 @@ min-height: 24vh;
 }
 
 .footer-logo-circle {
-  width: 32px; /* Smaller in footer */
+  width: 32px;
   height: 32px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -592,15 +582,16 @@ min-height: 24vh;
 }
 
 .footer-right a:hover {
-    color: var(--accent-gold);
+  color: var(--accent-gold);
 }
 
 .dot {
-    color: var(--accent-light);
+  color: var(--accent-light);
 }
 
-/* SIMPLE RESPONSIVENESS */
+/* ========== RESPONSIVENESS ========== */
 
+/* Tablets / small laptops */
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -612,47 +603,136 @@ min-height: 24vh;
     font-size: 40px;
   }
 
+  /* Make pill row normal width and nicer on mid screens */
   .hero-pill-row {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    margin-top: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
-  
+
   .pill-card {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
-  
-  /* Responsive adjustment for nav logo placement */
+
+  /* Stack nav a bit nicer */
   .nav-inner {
-      flex-direction: column;
-      height: auto;
-      padding: 15px 30px;
+    flex-direction: column;
+    height: auto;
+    padding: 15px 30px;
   }
-  
+
   .nav-inner nav ul {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 }
 
+/* Phones / iPhones & below */
 @media (max-width: 768px) {
   .nav-inner nav ul {
+    gap: 12px;
+    font-size: 11px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    align-items: center;
+  }
+
+  .hero-text {
+    padding: 70px 0 40px;
+  }
+
+  /* Smaller hero heading + text on phones */
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.35;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  /* STACK PILLS VERTICALLY, SMALLER EVERYTHING */
+  .hero-pill-row {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 16px;
     gap: 20px;
-    font-size: 12px;
+  }
+
+  .pill-card {
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .pill-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .pill-title {
+    font-size: 20px;
+  }
+
+  .pill-desc {
+    font-size: 13px;
+  }
+
+  /* Hide big round logo on mobile */
+  .hero-logo {
+    display: none;
+  }
+
+  .services {
+    padding: 80px 0;
   }
 
   .services-inner {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .service-column h2 {
-    margin-top: 40px;
+    font-size: 22px;
+    margin-top: 20px;
   }
-  
-  .hero-logo {
-    display: none; /* Hide large logo on small screens for better space */
+
+  .service-list {
+    font-size: 14px;
   }
-  
+
+  .contact-inner {
+    padding: 60px 20px;
+  }
+
   .contact-form-area {
-      max-width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-form-area h2 {
+    font-size: 26px;
+  }
+
+  .contact-form-area p {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 0;
   }
 
   .footer > div {
@@ -660,18 +740,40 @@ min-height: 24vh;
     gap: 15px;
     text-align: center;
   }
-  
+
   .footer-right {
-      flex-wrap: wrap;
-      justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
+/* Extra small devices (very small iPhones etc.) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 18px;
+  }
 
-/* Dashboard image (left column) - REPLACED WITH DUMMY CSS */
-.service-dashboard {
-  margin-top: 30px;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .pill-title {
+    font-size: 18px;
+  }
+
+  .pill-desc {
+    font-size: 12px;
+  }
+
+  .contact-form-area h2 {
+    font-size: 22px;
+  }
+
+  .footer {
+    font-size: 11px;
+  }
 }
