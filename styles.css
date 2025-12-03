@@ -356,13 +356,17 @@ body {
   height: 180px; /* Slightly taller */
   object-fit: cover;
   display: block;
+  opacity: 80%;
 }
 
 .service-illustration img {
   width: 100%;
-  height: 140px; /* Slightly taller */
-  object-fit: cover;
+  height: 190px; /* Slightly taller */
+  object-fit:fill;
   display: block;
+    opacity: 90%;
+    border:none;
+    box-shadow: none;
 }
 
 /* --- REVISED CERTIFICATION LOGO STYLES --- */
@@ -405,7 +409,7 @@ body {
 
 .contact {
   position: relative;
-  min-height: 90vh; /* Reduced slightly */
+min-height: 24vh;
   padding-top: var(--nav-height);
   background-image: url("office1.png"); /* Ensure high-res image */
   background-size: cover;
@@ -661,4 +665,13 @@ body {
       flex-wrap: wrap;
       justify-content: center;
   }
+}
+
+
+/* Dashboard image (left column) - REPLACED WITH DUMMY CSS */
+.service-dashboard {
+  margin-top: 30px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
 }
